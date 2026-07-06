@@ -1,9 +1,25 @@
 # AAC Product Blueprint
 
-**Version:** v1.3.0  
-**Last Update Date:** 2026-07-05  
-**Status:** Stable Draft  
-**Version Theme:** Flexible Support Paths（弹性支持路径）
+| Item | Value |
+|------|-------|
+| Document | AAC Product Blueprint |
+| Version | v1.3.1 |
+| Status | Released |
+| Based on | 00_Document_Guideline v1.0.0 |
+| Compatibility | - |
+| Owner | Miles |
+| Last Update | 2026-07-06 |
+| Next Document | 02_Design_System.md |
+
+---
+
+# Purpose（目的）
+
+本文件定义 AAC 产品的发展方向、设计原则、产品范围与核心目标。
+
+Blueprint 是整个产品开发过程的最高层产品规范。
+
+所有 Design System、Component System、Flutter Architecture 与 Flutter 实作皆应遵循本文件。
 
 ---
 
@@ -258,20 +274,6 @@ App 不以训练、作业、考核或完成率的方式要求使用者使用。
 成长反馈应以「表达了什么」、「说得更多了」、「尝试了哪些新内容」为核心，而不是以「训练成果」、「完成率」、「错误率」或「达标情况」呈现。
 
 对于不希望查看数据的使用者，表达视图应保持纯净，不显示任何成长统计入口。
-
-### P-13 弹性支持路径（Flexible Support Paths）
-
-App 不假设所有主要使用者都有相同支持资源。
-
-专业支持可以增强体验，但日常表达不应依赖专业支持才能发生。
-
-App 必须同时支持：
-
-- 主要使用者自主表达。
-- 家人陪伴与协助。
-- SLP 专业支持。
-
-三种路径可以单独存在，也可以组合使用。
 
 ---
 
@@ -670,3 +672,34 @@ App 必须同时支持：
 
 > 使用者不是来完成训练的，  
 > 使用者是来表达自己的。
+
+---
+
+# Appendix A｜Project Glossary（项目术语）
+
+|Term	| Official Name |	Description|
+|-----|---------------|------------|
+|Primary User | Primary User | 主要使用者|
+|Companion View | Companion View | 陪伴视图|
+|Support View | Support View | 支持视图|
+|Personal Library | Personal Library | 个人词库|
+|Core Library | Core Library | 核心词库|
+
+---
+
+# Revision History
+
+| Version | Date | Description |
+|----------|------|-------------|
+| v1.3.1 | 2026-07-06 | Updated document format to follow AAC Document Guideline v1.0.0. No product content changes. |
+| v1.3.0 | 2026-07-05 | Flexible Support Paths. |
+
+---
+
+# End of Document
+
+AAC Product Blueprint
+Version v1.3.1
+Released
+
+© AAC Project

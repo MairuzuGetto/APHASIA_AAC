@@ -15,72 +15,62 @@
 
 # 1. Purpose（目的）
 
-本文件定义 AAC 专案所有文件的统一编写规范。
+本文件定义 AAC 项目所有文档的统一编写规范。
 
 目的包括：
 
-- 建立一致的文件格式
-- 提高文件可读性
+- 建立统一的文档格式
+- 提高文档可读性
 - 降低维护成本
-- 建立文件之间的关联关系
+- 建立文档之间的关联关系
 - 提供统一版本管理方式
 - 建立长期可维护的产品文档体系
 
-所有 Markdown 文件皆应遵循本规范。
+所有 Markdown 文件均应遵循本规范。
 
 ---
 
 # 2. Metadata Header（文件标头）
 
-每份文件皆应于第一页建立 Metadata Header。
+所有文档第一页均应建立 Metadata Header。
 
 统一格式如下：
 
 | Item | Value |
 |------|-------|
-| Document | 文件名称 |
+| Document | 文档名称 |
 | Version | v1.0.0 |
 | Status | Draft / Review / Released / Deprecated |
-| Based on | 关联文件 |
-| Compatibility | 相容版本 |
-| Owner | 文件负责人 |
+| Based on | 上层关联文档 |
+| Compatibility | 兼容版本 |
+| Owner | 文档负责人 |
 | Last Update | YYYY-MM-DD |
-| Next Document | 下一份文件 |
+| Next Document | 下一份文档 |
 
 ---
 
-# 3. Document Status（文件状态）
+# 3. Document Status（文档状态）
 
-所有文件统一采用以下状态。
+所有文档统一采用以下状态：
 
 | Status | Description |
 |---------|-------------|
 | Draft | 草稿，内容仍持续讨论。 |
 | Review | 内容完成，等待确认。 |
 | Released | 正式发布版本。 |
-| Deprecated | 已停止维护，仅保留历史纪录。 |
+| Deprecated | 已停止维护，仅保留历史记录。 |
 
 ---
 
 # 4. Version Rule（版本规范）
 
-所有文件统一采用 Semantic Versioning。
+所有文档统一采用 Semantic Versioning（语义化版本）。
 
 格式：
 
+```
 Major.Minor.Patch
-
-例如：
-
-v1.0.0
-
-版本规则：
-
-| Type | Description |
-|------|-------------|
-| Major | 产品方向或文件结构发生重大调整。 |
-| Minor | 新增章节、原则、功能说明。 |
-| Patch | 修正文字、格式、描述或轻微调整。 |
+```
 
 例如：
 
@@ -91,11 +81,19 @@ v1.1.0
 v2.0.0
 ```
 
+版本规则：
+
+| Type | Description |
+|------|-------------|
+| Major | 产品方向、文档结构或设计原则发生重大调整。 |
+| Minor | 新增章节、规范、原则或功能说明。 |
+| Patch | 修正文字、格式、描述或轻微调整。 |
+
 ---
 
 # 5. File Naming Rule（文件命名规范）
 
-所有文件统一采用数字排序。
+所有文档统一采用数字排序。
 
 例如：
 
@@ -115,12 +113,13 @@ v2.0.0
 06_Development_Log.md
 ```
 
-原则：
+命名原则：
 
 - 使用 Pascal Case。
-- 单字使用底线（_）分隔。
-- 文件名称简洁明确。
-- 避免空格与特殊符号。
+- 单词使用底线（_）连接。
+- 文件名称保持简洁明确。
+- 不使用空格。
+- 不使用特殊符号。
 
 ---
 
@@ -130,12 +129,12 @@ v2.0.0
 
 标题：
 
-```
-# Heading
+```markdown
+# 一级标题
 
-## Heading
+## 二级标题
 
-### Heading
+### 三级标题
 ```
 
 建议使用：
@@ -145,37 +144,34 @@ v2.0.0
 - Markdown List
 - Markdown Code Block
 
-避免：
+避免使用：
 
 - HTML 标签
 - 复杂排版
-- 过度颜色标记
+- 颜色标记
+- 依赖特定编辑器功能
 
-保持 GitHub、VS Code Preview 良好兼容性。
+确保 GitHub、VS Code Preview 等环境均可正常显示。
 
 ---
 
 # 7. Writing Style（写作风格）
 
-所有产品文件统一采用正式描述。
+所有产品文档统一采用正式、客观、简洁的描述方式。
 
 建议：
 
-✔ 使用陈述句。
-
-✔ 使用客观描述。
-
-✔ 保持简洁。
-
-✔ 一段说明一个概念。
+- 使用陈述句。
+- 一段说明一个概念。
+- 描述明确、避免歧义。
+- 保持逻辑一致。
 
 避免：
 
-✘ 口语化。
-
-✘ 主观推测。
-
-✘ 含糊不清。
+- 口语化表达。
+- 主观推测。
+- 模糊描述。
+- 情绪性文字。
 
 例如：
 
@@ -197,59 +193,101 @@ v2.0.0
 
 # 8. Language Rule（语言规范）
 
-统一语言格式。
+为保持整个 AAC 项目文档的一致性，所有文档统一采用以下语言规范。
 
-中文：
+## 文档语言
 
-- 使用繁体中文。
-- 使用全形中文标点。
+产品文档统一使用**简体中文**编写。
 
-英文：
+英文仅用于：
 
-- 保持原文。
-- 使用半形标点。
-
-技术名称：
-
-保持官方命名。
+- 专有名词
+- 技术术语
+- API 名称
+- Flutter 官方名称
+- Design System 相关名称
 
 例如：
 
 ```
 Flutter
-
-Material Design
-
+Product Blueprint
 Design System
-
+Design Token
 Focus Card
-
 PageView
-
 AI
-
 OCR
 ```
 
-避免同一词汇出现多个写法。
+---
+
+## 命名规范
+
+所有技术名称统一采用官方英文名称。
+
+正文首次出现建议采用：
+
+```
+Design System（设计系统）
+```
+
+之后可直接使用：
+
+```
+Design System
+```
+
+避免同一术语出现多个名称。
+
+例如：
+
+统一：
+
+```
+Button
+Card
+Dialog
+Design Token
+```
+
+避免：
+
+```
+按钮 / Button / Btn
+
+卡片 / Card
+
+设计变量 / Token
+```
+
+同一概念应仅保留一种正式名称。
+
+---
+
+## 标点规范
+
+中文内容：
+
+统一使用中文标点。
+
+英文内容：
+
+统一使用英文标点。
+
+中英文混排时保持自然阅读。
 
 例如：
 
 ```
-Button
-
-按钮
-
-Btn
+AAC Design System 定义了整个 App 的设计规范。
 ```
-
-统一择一使用。
 
 ---
 
-# 9. File Structure（文件结构）
+# 9. File Structure（文档结构）
 
-建议所有文件采用统一结构。
+建议所有产品文档采用统一结构。
 
 ```
 Metadata Header
@@ -268,38 +306,43 @@ Notes（可选）
 
 ↓
 
-Revision History（版本纪录）
+Revision History（版本记录）
 ```
 
-不同类型文件可依需求调整章节，
-但建议维持整体一致性。
+不同类型文档可根据实际需求调整章节，
+但建议整体保持一致。
 
 ---
 
-# 10. Revision History（版本纪录）
+# 10. Revision History（版本记录）
 
-每份文件建议保留版本纪录。
+所有文档建议保留版本记录。
 
-格式：
+格式如下：
 
 | Version | Date | Description |
 |----------|------|-------------|
 | v1.0.0 | 2026-07-05 | Initial Release |
 
-后续更新持续追加。
+后续版本持续追加。
 
 ---
 
-# Appendix A（术语定义）
+# Appendix A（Project Glossary｜项目术语）
 
-| Term | Description |
-|------|-------------|
-| Blueprint | 产品蓝图，定义产品方向。 |
-| Design System | 定义产品视觉与互动规范。 |
-| Component | 可重复使用的 UI 元件。 |
-| Design Token | 设计变量，例如颜色、字体、间距。 |
-| Theme | Flutter 全域主题。 |
-| Flutter Architecture | Flutter 专案程式架构。 |
+| Term | Official Name | Description |
+|------|---------------|-------------|
+| Product Blueprint | Product Blueprint | 产品蓝图 |
+| Design System | Design System | 设计系统 |
+| Design DNA | Design DNA | 设计 DNA |
+| Design Language | Design Language | 设计语言 |
+| Design Token | Design Token | 设计变量 |
+| Component | Component | 可复用 UI 组件 |
+| Theme | Theme | Flutter 全局主题 |
+| Focus Card | Focus Card | 焦点卡片 |
+| Personal Library | Personal Library | 个人词库 |
+| Core Library | Core Library | 核心词库 |
+| Flutter Architecture | Flutter Architecture | Flutter 项目架构 |
 
 ---
 

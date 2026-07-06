@@ -5,8 +5,8 @@
 | Document | AAC Design System |
 | Version | v1.0.0 |
 | Status | Draft |
-| Based on | Product Blueprint v1.3.0 |
-| Compatibility | Blueprint v1.3.x |
+| Based on | Product Blueprint v1.3.1 |
+| Compatibility | Blueprint v1.3.1 |
 | Owner | Miles |
 | Last Update | 2026-07-05 |
 | Next Document | 03_Component_System.md |
@@ -107,16 +107,12 @@ Design Language 定义了本产品希望带给使用者的整体体验。
 后续所有 Design Tokens、Component、Theme 与 Flutter 实作，
 皆应遵循以下设计语言。
 
----
-
 ## LANG-01 Clear（清晰）
 
 > 让重要资讯一眼即可辨识。
 
 介面应以资讯传达为优先，减少装饰元素，
 避免使用者将注意力放在 UI 本身。
-
----
 
 ## LANG-02 Focused（专注）
 
@@ -127,8 +123,6 @@ Design Language 定义了本产品希望带给使用者的整体体验。
 
 让沟通成为唯一焦点。
 
----
-
 ## LANG-03 Predictable（可预期）
 
 > 所有操作都应符合使用者的预期。
@@ -136,8 +130,6 @@ Design Language 定义了本产品希望带给使用者的整体体验。
 位置一致、互动一致、动画一致。
 
 让使用者清楚知道下一步会发生什么。
-
----
 
 ## LANG-04 Gentle（柔和）
 
@@ -148,8 +140,6 @@ Design Language 定义了本产品希望带给使用者的整体体验。
 设计应给予陪伴感，
 而不是压迫感。
 
----
-
 ## LANG-05 Familiar（熟悉）
 
 > 所有设计都应贴近日常生活经验。
@@ -157,8 +147,6 @@ Design Language 定义了本产品希望带给使用者的整体体验。
 降低学习成本，让使用者能够凭直觉理解内容。
 
 不追求科技感，也不过度强调医疗感。
-
----
 
 ## LANG-06 Efficient（高效率）
 
@@ -168,9 +156,98 @@ Design Language 定义了本产品希望带给使用者的整体体验。
 
 任何新增功能，都应帮助使用者更快完成表达。
 
+# 4. Component Principles（组件原则）
+
+Component 是 AAC App 的基本组成单位。
+
+所有 UI 都应由可重复使用的 Component 组成，
+而非针对单一页面独立开发。
+
+每个 Component 都应遵循以下原则。
+
+## COMP-01 Reusable（可复用）
+
+每个 Component 应可在多个页面重复使用。
+
+避免为单一页面建立专属 Widget。
+
+## COMP-02 Consistent（一致性）
+
+相同功能应使用相同 Component。
+
+例如：
+
+Phrase Card 在首页、收藏、历史纪录，
+皆应保持一致的视觉与互动方式。
+
+## COMP-03 Token Driven（由 Design Token 驱动）
+
+所有 Component 应引用 Design Tokens。
+
+不得直接使用：
+
+- Color
+- Font Size
+- Radius
+- Padding
+
+等硬编码数值。
+
+## COMP-04 Modular（模块化）
+
+每个 Component 应保持单一职责。
+
+复杂画面应由多个 Component 组合，
+而非建立大型 Widget。
+
+## COMP-05 Accessible（可存取）
+
+所有 Component 应符合 Accessibility 规范。
+
+包括：
+
+- Touch Target
+- 字体缩放
+- 语音辅助
+- 对比度
+
+## COMP-06 Predictable（可预期）
+
+Component 的互动行为必须保持一致。
+
+例如：
+
+点击、
+
+长按、
+
+动画、
+
+状态变化，
+
+皆应符合使用者预期。
+
+## Component Relationship
+
+Design Language
+
+↓
+
+Component Principles
+
+↓
+
+Component Guide
+
+↓
+
+Flutter Widget
+
 ---
 
-# 4. Design Tokens（设计变量）
+# 5. Design Tokens（设计变量）
+> Token 数值将在 Flutter Prototype 与真机测试完成后逐步回填，
+> Design Tokens 属于 Living Specification。
 
 Design Tokens 定义了整个 AAC Design System 所使用的基础设计变量。
 
@@ -263,12 +340,6 @@ Design Tokens 的目的：
 | Minimum | 48dp | 最小可点击区域 |
 | Recommended | 56dp | 建议点击区域 |
 | Large | 64dp | 大尺寸按钮 |
-
----
-
-# 5. Component System（组件系统）
-
-> Coming Soon
 
 ---
 
